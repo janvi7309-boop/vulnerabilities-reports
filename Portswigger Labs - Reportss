@@ -1,0 +1,28 @@
+1. PATH TRAVERSAL
+Path Traversal occurs when an application exposes backend file system paths through user input.
+
+LAB 1: FILE PATH TRAVERSAL SIMPLE CASE
+CWE ID: 22 (Improper Limitation of a Pathname to a Restricted Directory) 
+CVSS score - 7.3 (High)
+
+Description: path traversal vulnerability in the display of product images.
+
+Impact: the ability to bypass access controls and read arbitrary files on the server.
+
+POC (Proof of concept):
+intercept the request with parameter file name.
+modify file name to ../../../etc/passwd.
+server responded with the requested file.
+
+Screenshot: https://0ac90033041a64178154eeee00ab00ea.web-security-academy.net/product?productId=1
+Congratulations, you solved the lab!
+
+Prevention: 
+Serve Files by ID
+Validate Input Against an Allowlist- whitelisting
+Validate the Resolved Path
+Restrict File System Permissions
+Avoid passing user input to filesystem APIs
+
+
+

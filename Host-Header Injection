@@ -1,0 +1,22 @@
+Host Header Injection
+Host Header Injection is a web vulnerability that occurs when a web server blindly trusts the user-controllable Host header 
+LAB 1: Host header authentication bypass
+CWE ID: 290 Authentication Bypass by Spoofing
+CVSS score:7.5 to 9.8 (High to Critical)
+
+Description:  lab makes an assumption about the privilege level of the user based on the HTTP Host header
+
+POC (Proof of Concept):
+intercept GET/ request and modify host (by replacing .net with .co.in or .com), 200 ok response .
+browse url by robots.txt , then /admin to find that only local users can access .
+intercet /admin request and change host to "local host" hence got the admin page access.
+modify get /admin to /admin/delete?username=carlos thus deleting the user.
+
+Screenshot:https://0aa5007a0380bac284d76f6900580073.web-security-academy.net/
+
+Mitigation: 
+Drop unknown hosts
+Never use the HTTP Host header to determine if a request originates from localhost or an internal network.
+Ensure administrative panels and internal APIs bind to the loopback interface (127.0.0.1), ignoring public interface
+Delete or overwrite incoming X-Forwarded-Host and Forwarded headers from clients.
+Enforce uniform routing,Ensure your front-end proxy and back-end application parse HTTP headers identically to prevent proxy-bypass exploitation.

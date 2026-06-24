@@ -7,6 +7,8 @@ CVSS score:7.5 to 9.8 (High to Critical)
 
 Description:  lab makes an assumption about the privilege level of the user based on the HTTP Host header
 
+Impact: Server manipulated by header resulting in admin panel access.  
+
 POC (Proof of Concept):
 
 Intercept GET/ request and modify host ( .co.in or .com), 200 ok response.

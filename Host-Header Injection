@@ -9,10 +9,10 @@ Description:  lab makes an assumption about the privilege level of the user base
 
 POC (Proof of Concept):
 
-intercept GET/ request and modify host (by replacing .net with .co.in or .com), 200 ok response .
-browse url by robots.txt , then /admin to find that only local users can access .
-intercet /admin request and change host to "local host" hence got the admin page access.
-modify get /admin to /admin/delete?username=carlos thus deleting the user.
+Intercept GET/ request and modify host ( .co.in or .com), 200 ok response.
+Browse url by robots.txt , then /admin to find that only local users can access.
+Intercet /admin request and change host to "local host".
+Modify get /admin to /admin/delete?username=carlos thus deleting the user.
 
 Screenshot:https://0aa5007a0380bac284d76f6900580073.web-security-academy.net/
 

@@ -17,7 +17,7 @@ modify get /admin to /admin/delete?username=carlos thus deleting the user.
 Screenshot:https://0aa5007a0380bac284d76f6900580073.web-security-academy.net/
 
 Mitigation: 
-Drop unknown hosts
+Drop unknown hosts.
 Enforce Strict Host Header Validation.
 Configure Reverse Proxies and Web Servers.
 Handle Proxy Headers Securely.

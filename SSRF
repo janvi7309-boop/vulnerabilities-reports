@@ -1,0 +1,17 @@
+SSRF (Server Side Request Forgery)
+SSRF is a vulnerability that allows an attacker to cause the server-side application to make requests to an unintended location. 
+
+LAB 1: Basic SSRF against the local server
+CWE ID: 918 
+CVSS score:  between 5.3 and 8.3 
+
+Description: This lab has a stock check feature which fetches data from an internal system, to access panel.
+to delete user carlos.
+
+Impact: privilege escalation and unintedned command executed by server. 
+
+POC (Proof of Concept):
+
+Intercept stock api request (i.e. the input to server).
+Modify stock api to - http://localhost in render admin panel visible.
+Add /admin and then further add /delete?username=carlos.

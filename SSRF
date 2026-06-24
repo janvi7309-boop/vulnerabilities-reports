@@ -16,6 +16,8 @@ Intercept stock api request (i.e. the input to server).
 Modify stock api to - http://localhost in render admin panel visible.
 Add /admin and then further add /delete?username=carlos.
 
+Screenshot:  https://0a3800e9040a5cd38084535f00e300bd.web-security-academy.net/product?productId=2
+
 Mitigation: 
 1. Implement Strict Allowlisting
 2. Disable Unused URL Schemas

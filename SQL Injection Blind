@@ -1,0 +1,9 @@
+Sql Injection : 
+Technique where an application is vulnerable to SQL injection but its HTTP responses do not contain the results of the relevant query or any database errors. 
+Attackers extract data by asking the database true/false questions or by forcing time delays.
+
+Description: Sqli blind where output is not shown in http request but retrieved via automation.
+
+Difficulty Level: medium CWE ID: CWE-89 (SQL Injection) CVSS Score: 9.0 (Critical) Risk Rating: Critical
+
+Impact: Data extraction and enumeration possible without visible output.
